@@ -21,6 +21,8 @@ To get the frontend running locally:
 
 - Clone this repo
 - `npm install` to install all req'd dependencies
+- `npm install -g junit-merge`
+- `npm install -g xunit-viewer`
 - `npm start` to start the local server (this project uses create-react-app)
 - `npm run testE2E -- --env env='qa' --headed --browser chrome` to run the cypress test using command line
 - `npm run mergereport` to generate a merged Json file, which can be used for Jenkins /creating HTML reports
