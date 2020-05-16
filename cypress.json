@@ -1,0 +1,14 @@
+{
+    "defaultCommandTimeout": 6000,
+    "pageLoadTimeout": 20000,
+    "baseUrl": "http://localhost:4100",
+    "env": {
+    "qa": {
+      "url": "http://localhost:4100"
+    },
+    "dev": {
+      "url": "https://google.com"
+    },
+    "env": "qa"
+  }
+}

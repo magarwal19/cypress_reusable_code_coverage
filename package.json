@@ -1,0 +1,60 @@
+{
+  "name": "react-redux-realworld-example-app",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.7.0",
+    "@cypress/instrument-cra": "^1.1.1",
+    "cross-env": "^5.1.4",
+    "cypress": "^4.5.0",
+    "cypress-multi-reporters": "^1.2.4",
+    "g-sheets-api": "^1.2.0",
+    "istanbul-lib-coverage": "^3.0.0",
+    "mocha-junit-reporter": "^1.23.3",
+    "node-xlsx": "^0.15.0",
+    "nyc": "^15.0.1",
+    "papaparse": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "xlsx": "^0.16.0"
+  },
+  "dependencies": {
+    "history": "^4.6.3",
+    "marked": "^0.3.6",
+    "prop-types": "^15.5.10",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.1.2",
+    "react-router-dom": "^4.1.2",
+    "react-router-redux": "^5.0.0-alpha.6",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-logger": "^3.0.1",
+    "superagent": "^3.8.2",
+    "superagent-promise": "^1.1.0"
+  },
+  "scripts": {
+    "start": "cross-env PORT=4100 react-scripts -r @cypress/instrument-cra start",
+    "build": "react-scripts build",
+    "test": "cross-env PORT=4100 react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "delete:results": "if exist  \".\\cypress\\results\" rmdir .\\cypress\\results /q /s",
+    "delete:coverageReports": "if exist  \".\\coverage\" rmdir .\\coverage /q /s",
+    "pretestE2E": "npm run delete:results && npm run delete:coverageReports ",
+    "testE2E": "./node_modules/.bin/cypress run --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json",
+    "mergereport": "junit-merge -d ./cypress/results -o ./cypress/results/merged.xml",
+    "createHTMLReport": "xunit-viewer -r ./cypress/results/merged.xml -o ./cypress/results/merged.html"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
