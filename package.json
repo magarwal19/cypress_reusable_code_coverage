@@ -15,11 +15,11 @@
     "nyc": "^15.0.1",
     "papaparse": "^5.2.0",
     "react-scripts": "3.4.1",
-    "xlsx": "^0.16.0"
+    "xlsx": "^0.17.5"
   },
   "dependencies": {
     "history": "^4.6.3",
-    "marked": "^0.3.6",
+    "marked": "^4.0.10",
     "prop-types": "^15.5.10",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
